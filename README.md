@@ -155,6 +155,49 @@ Za testiranje (npr. Insomnia): GET `/api/statistics` vraća osnovne statistike (
 
 ---
 
+## Statusi prijave
+
+| Status | Opis |
+|--------|------|
+| Draft | Prijava u izradi, moguće uređivanje |
+| Submitted | Poslana, zaključana za uređivanje |
+| Under review | U obradi od strane administracije |
+| Accepted | Prihvaćena |
+| Rejected | Odbijena |
+| Needs correction | Potrebne ispravke, kandidat može ponovo uređivati |
+
+---
+
+## Obavezan dokumenti
+
+- Lična karta / pasoš
+- Svjedodžba
+- Rodni list
+- Dokaz o uplati
+
+---
+
+## Baza podataka
+
+Glavne tabele: `users`, `applications`, `faculties`, `departments`, `subjects`, `application_grades`, `scoring_rules`, `documents`, `admin_notes`. Veze su tipa 1:N. Shema je definisana Laravel migracijama.
+
+---
+
+## Testiranje
+
+- **OCR:** PDF (pdftotext) ili sken/slika (Tesseract). Rezultat se čuva kao prijedlog sa confidence; kandidat može korigirati.
+- **API:** GET `/api/statistics` – Insomnia/Postman, očekivani status 200 OK.
+
+---
+
+## Troubleshooting
+
+- **OCR ne radi:** Provjeri da li su `tesseract` i `poppler` instalirani.
+- **Storage link:** Pokreni `php artisan storage:link` ako upload dokumenata ne radi.
+- **Permission denied:** Na Linuxu provjeri `storage/` i `bootstrap/cache/` – `chmod -R 775`.
+
+---
+
 ## Literatura
 
 - Laravel dokumentacija: https://laravel.com/docs
