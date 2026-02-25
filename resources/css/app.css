@@ -1,0 +1,219 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; 
+
+@layer base {
+    body {
+        @apply text-gray-100;
+        background-color: #070b12;
+        background-image: radial-gradient(circle at 12% 8%, rgba(66, 153, 225, 0.22), transparent 36%),
+            radial-gradient(circle at 86% 6%, rgba(99, 102, 241, 0.16), transparent 30%),
+            radial-gradient(circle at 50% 100%, rgba(15, 23, 42, 0.9), transparent 42%);
+        background-attachment: fixed;
+        min-height: 100vh;
+    }
+
+    ::selection {
+        @apply bg-blue-500 text-white;
+    }
+}
+
+@layer components {
+    .gradient-bg {
+        @apply min-h-screen;
+    }
+
+    .app-shell {
+        @apply min-h-screen pb-8;
+    }
+
+    .page-shell {
+        @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .app-topbar {
+        @apply sticky top-0 z-50 border-b border-gray-700 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-lg;
+    }
+
+    .app-surface {
+        @apply rounded-2xl border border-gray-700 bg-gray-900 bg-opacity-70 shadow-2xl;
+    }
+
+    .app-panel {
+        @apply rounded-xl border border-gray-700 bg-gray-800 bg-opacity-70;
+    }
+
+    .app-card {
+        @apply rounded-2xl border border-gray-700 bg-gray-800 bg-opacity-60 shadow-xl;
+    }
+
+    .app-kicker {
+        @apply text-xs uppercase tracking-wider text-gray-400;
+    }
+
+    .app-title {
+        @apply text-2xl md:text-3xl font-semibold tracking-tight text-white;
+    }
+
+    .app-subtitle {
+        @apply text-sm md:text-base text-gray-300;
+    }
+
+    .app-input {
+        @apply mt-1 block w-full rounded-xl border border-gray-600 bg-gray-900 bg-opacity-80 text-gray-100 placeholder-gray-500 shadow-inner focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-25;
+    }
+
+    .app-select {
+        @apply app-input;
+    }
+
+    .app-button-primary {
+        @apply inline-flex items-center justify-center rounded-xl border border-blue-600 bg-blue-600 px-4 py-2 font-medium text-white transition hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-40;
+    }
+
+    .app-button-secondary {
+        @apply inline-flex items-center justify-center rounded-xl border border-gray-600 bg-gray-800 px-4 py-2 font-medium text-gray-100 transition hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-40;
+    }
+
+    .app-button-danger {
+        @apply inline-flex items-center justify-center rounded-xl border border-red-600 bg-red-600 px-4 py-2 font-medium text-white transition hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-40;
+    }
+
+    .app-button-primary:disabled,
+    .app-button-secondary:disabled,
+    .app-button-danger:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .app-alert-success {
+        @apply rounded-xl border border-green-700 bg-green-900 bg-opacity-40 px-4 py-3 text-green-100;
+    }
+
+    .app-alert-error {
+        @apply rounded-xl border border-red-700 bg-red-900 bg-opacity-40 px-4 py-3 text-red-100;
+    }
+
+    .app-link {
+        @apply text-blue-300 transition hover:text-blue-200;
+    }
+
+    .app-nav-link {
+        @apply inline-flex items-center rounded-lg px-3 py-2 text-sm text-gray-300 transition hover:bg-gray-800 hover:text-white;
+    }
+
+    .app-nav-link-active {
+        @apply inline-flex items-center rounded-lg border border-gray-600 bg-gray-800 px-3 py-2 text-sm font-medium text-white;
+    }
+
+    .app-table {
+        @apply min-w-full text-sm text-gray-200;
+    }
+
+    .app-table thead tr {
+        @apply border-b border-gray-700 text-gray-400;
+    }
+
+    .app-table tbody tr {
+        @apply border-b border-gray-800;
+    }
+
+    .app-marquee {
+        @apply overflow-hidden rounded-xl border border-gray-700 bg-gray-900 bg-opacity-80;
+    }
+
+    .app-marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee-loop 18s linear infinite;
+    }
+
+    .app-marquee-item {
+        @apply px-8 py-2 text-sm font-medium uppercase tracking-wide text-blue-300;
+        white-space: nowrap;
+    }
+
+    .glass-card {
+        @apply app-card;
+    }
+
+    .glass-card-dark {
+        @apply app-surface;
+    }
+
+    .glass-alert-success {
+        @apply app-alert-success;
+    }
+
+    .glass-alert-error {
+        @apply app-alert-error;
+    }
+
+    .neo-heading {
+        @apply app-title;
+    }
+
+    .neo-subtitle {
+        @apply app-subtitle;
+    }
+
+    .neo-input {
+        @apply app-input;
+    }
+
+    .neo-select {
+        @apply app-select;
+    }
+
+    .neo-button-primary {
+        @apply app-button-primary;
+    }
+
+    .neo-button-secondary {
+        @apply app-button-secondary;
+    }
+
+    .neo-button-danger {
+        @apply app-button-danger;
+    }
+
+    .neo-button-primary:disabled,
+    .neo-button-secondary:disabled,
+    .neo-button-danger:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .neo-badge-draft {
+        @apply rounded-full border border-gray-600 bg-gray-700 bg-opacity-70 px-3 py-1 text-xs font-medium text-gray-200;
+    }
+
+    .neo-badge-submitted {
+        @apply rounded-full border border-blue-700 bg-blue-900 bg-opacity-50 px-3 py-1 text-xs font-medium text-blue-100;
+    }
+
+    .neo-badge-under-review {
+        @apply rounded-full border border-yellow-700 bg-yellow-900 bg-opacity-50 px-3 py-1 text-xs font-medium text-yellow-100;
+    }
+
+    .neo-badge-accepted {
+        @apply rounded-full border border-green-700 bg-green-900 bg-opacity-50 px-3 py-1 text-xs font-medium text-green-100;
+    }
+
+    .neo-badge-rejected {
+        @apply rounded-full border border-red-700 bg-red-900 bg-opacity-50 px-3 py-1 text-xs font-medium text-red-100;
+    }
+
+    .neo-badge-needs-correction {
+        @apply rounded-full border border-indigo-700 bg-indigo-900 bg-opacity-50 px-3 py-1 text-xs font-medium text-indigo-100;
+    }
+}
+
+@keyframes marquee-loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
