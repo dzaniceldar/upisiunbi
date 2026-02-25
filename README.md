@@ -1,6 +1,6 @@
 # Online upis studenata na Univerzitet u Bihaću
 
-Web aplikacija za online prijavu i obradu upisa studenata na Univerzitet u Bihaću. Projekat iz predmeta **Objektno orijentirane baze podataka** – Tehnički fakultet, Univerzitet u Bihaću.
+Web aplikacija za online prijavu i obradu upisa studenata na Univerzitet u Bihaću. Projekat iz predmeta **Objektno orijentisane baze podataka** – Tehnički fakultet, Univerzitet u Bihaću.
 
 **Autor:** Eldar Džanić  
 **Profesor:** Prof.dr Admir Midžić  
