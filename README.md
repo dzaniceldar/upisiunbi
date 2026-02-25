@@ -1,4 +1,4 @@
-# Online upis studenata – Univerzitet u Bihaću
+# Online upis studenata na Univerzitet u Bihaću
 
 Web aplikacija za online prijavu i obradu upisa studenata na Univerzitet u Bihaću. Projekat iz predmeta **Objektno orijentirane baze podataka** – Tehnički fakultet, Univerzitet u Bihaću.
 
