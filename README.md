@@ -12,7 +12,7 @@ Web aplikacija za online prijavu i obradu upisa studenata na Univerzitet u Biha�
 
 Aplikacija je razvijena u PHP-u uz Laravel framework, Jetstream i Livewire. Koristi se MVC arhitektura, MySQL baza i Eloquent ORM. Implementirane su dvije korisničke uloge: **kandidat (applicant)** i **administrator (admin)**.
 
-Kandidati mogu kreirati prijavu, birati fakultet i odsjek, unositi ili ručno ispravljati ocjene iz relevantnih predmeta, uploadovati dokumentnu evidenciju (svjedodžbu, ličnu kartu, rodni list, dokaz uplate) te koristiti OCR za automatsko prepoznavanje ocjena iz PDF dokumenata ili skeniranih slika. Bodovi se automatski izračunavaju prema pravilima bodovanja definisanim za svaki odsjek.
+Kandidati mogu kreirati prijavu, birati fakultet i odsjek, unositi ili ručno ispravljati ocjene iz relevantnih predmeta, uploadovati dokumentnu evidenciju (svjedodžbu, ličnu kartu, rodni list, dokaz uplate). Bodovi se automatski izračunavaju prema pravilima bodovanja definisanim za svaki odsjek.
 
 Administrator upravlja prijavama, pregledava dokumente i bodove, mijenja status prijave (Draft, Submitted, Under review, Accepted, Rejected, Needs correction), dodaje napomene i može exportovati podatke u CSV formatu.
 
